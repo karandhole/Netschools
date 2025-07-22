@@ -370,58 +370,6 @@
                     t(e).isotope({ filter: "*" });
                 });
         }),
-        // t(".counter-number").counterUp({ delay: 10, time: 1e3 }),
-        // (t.fn.thTab = function (e) {
-        //     var a = t.extend({ sliderTab: !1, tabButton: "button" }, e);
-        //     t(this).each(function () {
-        //         var e = t(this),
-        //             s = e.find(a.tabButton);
-        //         e.append('<span class="indicator"></span>');
-        //         var i = e.find(".indicator");
-        //         if (
-        //             (s.on("click", function (e) {
-        //                 e.preventDefault();
-        //                 var s = t(this);
-        //                 s.addClass("active").siblings().removeClass("active"), a.sliderTab ? t(n).slick("slickGoTo", s.data("slide-go-to")) : r();
-        //             }),
-        //             a.sliderTab)
-        //         ) {
-        //             var n = e.data("asnavfor"),
-        //                 o = 0;
-        //             s.each(function () {
-        //                 var s = t(this);
-        //                 s.attr("data-slide-go-to", o),
-        //                     o++,
-        //                     s.hasClass("active") && t(n).slick("slickGoTo", s.data("slide-go-to")),
-        //                     t(n).on("beforeChange", function (t, s, i, n) {
-        //                         e
-        //                             .find(a.tabButton + '[data-slide-go-to="' + n + '"]')
-        //                             .addClass("active")
-        //                             .siblings()
-        //                             .removeClass("active"),
-        //                             r();
-        //                     });
-        //             });
-        //         }
-        //         function r() {
-        //             var n = e.find(a.tabButton + ".active"),
-        //                 o = n.css("height"),
-        //                 r = n.css("width"),
-        //                 c = n.position().top + "px",
-        //                 l = n.position().left + "px";
-        //             i.get(0).style.setProperty("--height-set", o),
-        //                 i.get(0).style.setProperty("--width-set", r),
-        //                 i.get(0).style.setProperty("--pos-y", c),
-        //                 i.get(0).style.setProperty("--pos-x", l),
-        //                 t(s).first().position().left == n.position().left
-        //                     ? i.addClass("start").removeClass("center").removeClass("end")
-        //                     : t(s).last().position().left == n.position().left
-        //                     ? i.addClass("end").removeClass("center").removeClass("start")
-        //                     : i.addClass("center").removeClass("start").removeClass("end");
-        //         }
-        //         r();
-        //     });
-        // }),
         t(".testi-card2-tab").length && t(".testi-card2-tab").thTab({ sliderTab: !0, tabButton: ".tab-btn" }),
         t(".service-block-tab").length && t(".service-block-tab").thTab({ sliderTab: !0, tabButton: ".tab-btn" }),
         (t.fn.shapeMockup = function () {
