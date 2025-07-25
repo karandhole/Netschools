@@ -622,24 +622,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    // Function to submit the signup form
-
-    function submitForm() {
-
-        const email = emailInput.value;
-
-        // Add your form submission logic here
-
-        console.log(`Email submitted: ${email}`);
-
-        closePopupFunc(); // Close the popup after form submission
-
-    }
-
-    // Event listeners
-
-    // Trigger the popup to open (you can call this function on a button click or any other event)
-
     openPopup();
 
     // Close the popup when the close button is clicked
@@ -661,3 +643,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // You can customize and expand these functions based on your specific requirements.
 
 });
+
+
+  const stickyFooter = document.getElementById('stickyFooter');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      stickyFooter.classList.add('hidden');
+    } else {
+      // Scrolling up
+      stickyFooter.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
