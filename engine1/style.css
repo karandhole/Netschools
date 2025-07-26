@@ -1,4 +1,4 @@
-#wowslider-container1 { 
+#wowslider-container1{ 
 	display: table;
 	zoom: 1; 
 	position: relative;
@@ -209,7 +209,7 @@
 	box-shadow: none;
 }
 #wowslider-container1  .ws_bullets {
-	bottom:20px;
+	bottom:0px;
 	left:50%;
 }
 #wowslider-container1  .ws_bullets div{
