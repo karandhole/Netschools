@@ -349,6 +349,26 @@
         </div>
     </div>
 </div>
+
+<div class="context">
+        <h1>Pure Css Animated Background</h1>
+    </div>
+
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
        <div class="overflow-hidden space" id="about-sec">
             <div class="shape-mockup jump d-md-block d-none" data-right="0" data-bottom="10%"><img src="assets/img/about-shape.png" alt="shapes" /></div>
             <div class="container-fluid p-0">
@@ -384,7 +404,53 @@
                 </div>
             </div>
         </div>
-        
+        <div class="product-section">
+  <div class="stats">
+    <div><strong>50+</strong><br>Year Of Experience</div>
+    <div><strong>200+</strong><br>Field In Progress</div>
+    <div><strong>120,000+</strong><br>Farmer Around World</div>
+    <div><strong>$15 Billion</strong><br>Agricultural Product</div>
+  </div>
+
+  <div class="info">
+    <div class="year">2025</div>
+    <h2 class="headline">
+      Despite Advances In Agri-Tech,<br>
+      Traditional Labor-Intensive Farming Highlights Ongoing Inefficiencies.
+    </h2>
+    <div class="tags">
+      <span class="active">Organic farm</span>
+      <span>Automation farm</span>
+      <span>Bio-medical farm</span>
+    </div>
+    <div class="subheadings">
+      <span>Harvesting Legacy.</span>
+      <span>Planting Tomorrow</span>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <button class="arrow" id="prev">&#8592;</button>
+
+    <div class="slider" id="slider">
+      <div class="slide active">
+        <h3>Get Started Now</h3>
+        <p>Technology Irrigation</p>
+      </div>
+      <div class="slide">
+        <h3>03</h3>
+        <p>Technology Irrigation</p>
+      </div>
+      <div class="slide">
+        <h3>04</h3>
+        <p>Agricultural Monitoring</p>
+      </div>
+    </div>
+
+    <button class="arrow" id="next">&#8594;</button>
+  </div>
+</div>
+
         <section>
             <div class="container">
                 <div class="row">
@@ -1037,5 +1103,37 @@
         <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
         <script src="assets/js/app.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+  const slider = document.getElementById('slider');
+  const slides = slider.querySelectorAll('.slide');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  function updateSlider() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active');
+      slide.style.transform = `translateX(${(index - currentIndex) * 270}px)`;
+    });
+    slides[currentIndex].classList.add('active');
+  }
+
+  prev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  next.addEventListener('click', () => {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  updateSlider();
+</script>
     </body>
 </html>
